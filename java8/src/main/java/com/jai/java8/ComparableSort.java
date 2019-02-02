@@ -1,15 +1,15 @@
 package com.jai.java8;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-public class ClassicSort {
+public class ComparableSort {
 
 	List<Employee> employees = new ArrayList<Employee>();
 
-	public ClassicSort() {
+	public ComparableSort() {
 		employees.add(new Employee("Jay", 23));
 		employees.add(new Employee("Aisu", 3));
 		employees.add(new Employee("Zeebra", 123));
@@ -18,25 +18,36 @@ public class ClassicSort {
 	}
 
 	private void sort1() {
-		// employees.stream().forEach(e -> System.out.println(e));
-		employees.sort((a, b) -> a.age > b.age ? 1 : -1); // Sort age ascending
-		employees.stream().forEach(e -> System.out.println(e.age));
 
-		employees.sort((a, b) -> a.age < b.age ? 1 : -1); // Sort age descending
-		employees.stream().forEach(e -> System.out.println(e.age));
+		Collections.sort(employees);
+		employees.forEach(e -> System.out.println(((Employee) e).age));
+	}
 
+	private void lambdaSort() {
+		employees.sort((e1, e2) -> e1.age - e2.age);
+		employees.forEach(e -> System.out.println(e.age));
+
+		employees.sort((e1, e2) -> e2.age - e1.age);
+		employees.forEach(e -> System.out.println(e.age));
+
+		employees.sort((e1, e2) -> e1.name.compareTo(e2.name));
+		employees.forEach(e -> System.out.println(e.name));
+
+		employees.sort((e1, e2) -> e2.name.compareTo(e1.name));
+		employees.forEach(e -> System.out.println(e.name));
 	}
 
 	public static void main(String[] args) {
 
-		ClassicSort sort = new ClassicSort();
-		sort.sort1();
-		// sort.lambdaSort();
+		ComparableSort sort = new ComparableSort();
+		// sort.sort1();
+		sort.lambdaSort();
 	}
 
 }
 
-class Employee {
+// class Employee implements Comparator<Employee> {
+class Employee implements Comparable<Employee> { // Natural ordering
 
 	String name;
 	String city;
@@ -115,13 +126,11 @@ class Employee {
 		return "Employee [name=" + name + ", city=" + city + ", postCode=" + postCode + ", age=" + age + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 
-}
-
-class EmployeeComparator implements Comparator<Employee> {
-
+	// When implementing Comparable
 	@Override
-	public int compare(Employee o1, Employee o2) {
-		return o1.age == o2.age ? 1 : 0;
+	public int compareTo(Employee o) {
+		return this.age - o.age; // ascending
+		// return o.age - this.age; // descending
 	}
 
 }

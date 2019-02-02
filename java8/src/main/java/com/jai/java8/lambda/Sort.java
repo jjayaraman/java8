@@ -9,10 +9,14 @@ public class Sort {
 
 	List<String> names = Arrays.asList("Ram", "Sita", "Geeta", "Ramya", "Jay", "Sankar", "Aishwarya", "Zenifer", "Wimpey", "Xavier");
 
-	private void sort1() {
+	private void classicSort() {
 		System.out.println(names);
-		// Arrays.sort(names, Comparator.naturalOrder());
-		names.sor sort((a, b) -> a.compareTo(b));
+		names.sort(new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				return o1.compareTo(o2);
+			}
+		});
 		System.out.println(names);
 
 	}
@@ -29,8 +33,8 @@ public class Sort {
 	public static void main(String[] args) {
 
 		Sort sort = new Sort();
-		sort.sort1();
-		// sort.lambdaSort();
+		sort.classicSort();
+		sort.lambdaSort();
 	}
 
 }
@@ -81,15 +85,6 @@ class Employee {
 
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
-	}
-
-}
-
-class Compare implements Comparator {
-
-	@Override
-	public int compare(Object o1, Object o2) {
-		return 0;
 	}
 
 }
