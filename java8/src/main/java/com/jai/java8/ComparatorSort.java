@@ -3,41 +3,49 @@ package com.jai.java8;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
+
+import com.jai.java8.model.Employee;
 
 public class ComparatorSort {
 
-	List<Employee2> employees = new ArrayList<Employee2>();
+	List<Employee> employees = new ArrayList<Employee>();
 
 	public ComparatorSort() {
-		employees.add(new Employee2("Jay", 23));
-		employees.add(new Employee2("Aisu", 3));
-		employees.add(new Employee2("Zeebra", 123));
-		employees.add(new Employee2("Xavier", 30));
-		employees.add(new Employee2("Cinderla", 16));
+		employees.add(new Employee("Jay", 23));
+		employees.add(new Employee("Aisu", 3));
+		employees.add(new Employee("Zeebra", 123));
+		employees.add(new Employee("Xavier", 30));
+		employees.add(new Employee("Cinderla", 16));
 	}
 
 	private void sortByAge() {
 
 		Collections.sort(employees, new EmployeeAgeComparator());
-		employees.forEach(e -> System.out.println(((Employee2) e).age));
+		employees.forEach(e -> System.out.println(((Employee) e).getAge()));
 
 		Collections.sort(employees, new EmployeeAgeComparatorDesc());
-		employees.forEach(e -> System.out.println(((Employee2) e).age));
+		employees.forEach(e -> System.out.println(((Employee) e).getAge()));
 	}
 
 	private void sortByName() {
 		Collections.sort(employees, new EmployeeNameComparator());
-		employees.forEach(e -> System.out.println(e.name));
+		employees.forEach(e -> System.out.println(e.getName()));
 
 		Collections.sort(employees, new EmployeeNameComparatorDesc());
-		employees.forEach(e -> System.out.println(e.name));
+		employees.forEach(e -> System.out.println(e.getName()));
 	}
 
 	private void lambdaSort() {
 
 		Comparator<Employee> ageComparator = Comparator.comparing(Employee::getAge);
+		employees.forEach(e -> System.out.println(e.getAge()));
+		Collections.sort(employees, ageComparator);
+		employees.forEach(e -> System.out.println(e.getAge()));
+
+		Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
+		Collections.sort(employees, nameComparator);
+		employees.forEach(e -> System.out.println(e.getName()));
 	}
 
 	public static void main(String[] args) {
@@ -45,118 +53,39 @@ public class ComparatorSort {
 		ComparatorSort sort = new ComparatorSort();
 		sort.sortByAge();
 		sort.sortByName();
+		sort.lambdaSort();
 	}
 
 }
 
-class Employee2 {
-
-	String name;
-	String city;
-	String postCode;
-	int age;
-	Date dateOfBirth;
-
-	/**
-	 * @param name
-	 * @param age
-	 */
-	public Employee2(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
-
-	/**
-	 * @param name
-	 * @param city
-	 * @param postCode
-	 * @param age
-	 * @param dateOfBirth
-	 */
-	public Employee2(String name, String city, String postCode, int age, Date dateOfBirth) {
-		super();
-		this.name = name;
-		this.city = city;
-		this.postCode = postCode;
-		this.age = age;
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getPostCode() {
-		return postCode;
-	}
-
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+class EmployeeAgeComparator implements Comparator<Employee> {
 
 	@Override
-	public String toString() {
-		return "Employee [name=" + name + ", city=" + city + ", postCode=" + postCode + ", age=" + age + ", dateOfBirth=" + dateOfBirth + "]";
+	public int compare(Employee o1, Employee o2) {
+		return o1.getAge() - o2.getAge();
 	}
 }
 
-class EmployeeAgeComparator implements Comparator<Employee2> {
+class EmployeeAgeComparatorDesc implements Comparator<Employee> {
 
 	@Override
-	public int compare(Employee2 o1, Employee2 o2) {
-		return o1.age - o2.age;
+	public int compare(Employee o1, Employee o2) {
+		return o2.getAge() - o1.getAge();
 	}
 }
 
-class EmployeeAgeComparatorDesc implements Comparator<Employee2> {
+class EmployeeNameComparator implements Comparator<Employee> {
 
 	@Override
-	public int compare(Employee2 o1, Employee2 o2) {
-		return o2.age - o1.age;
+	public int compare(Employee o1, Employee o2) {
+		return o1.getName().compareTo(o2.getName());
 	}
 }
 
-class EmployeeNameComparator implements Comparator<Employee2> {
+class EmployeeNameComparatorDesc implements Comparator<Employee> {
 
 	@Override
-	public int compare(Employee2 o1, Employee2 o2) {
-		return o1.name.compareTo(o2.name);
-	}
-}
-
-class EmployeeNameComparatorDesc implements Comparator<Employee2> {
-
-	@Override
-	public int compare(Employee2 o1, Employee2 o2) {
-		return o2.name.compareTo(o1.name);
+	public int compare(Employee o1, Employee o2) {
+		return o2.getName().compareTo(o1.getName());
 	}
 }

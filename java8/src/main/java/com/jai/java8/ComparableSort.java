@@ -2,135 +2,61 @@ package com.jai.java8;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
+
+import com.jai.java8.model.Employee;
 
 public class ComparableSort {
 
-	List<Employee> employees = new ArrayList<Employee>();
+	List<Employee2> employees = new ArrayList<Employee2>();
 
 	public ComparableSort() {
-		employees.add(new Employee("Jay", 23));
-		employees.add(new Employee("Aisu", 3));
-		employees.add(new Employee("Zeebra", 123));
-		employees.add(new Employee("Xavier", 30));
-		employees.add(new Employee("Cinderla", 16));
+		employees.add(new Employee2("Jay", 23));
+		employees.add(new Employee2("Aisu", 3));
+		employees.add(new Employee2("Zeebra", 123));
+		employees.add(new Employee2("Xavier", 30));
+		employees.add(new Employee2("Cinderla", 16));
 	}
 
 	private void sort1() {
-
 		Collections.sort(employees);
-		employees.forEach(e -> System.out.println(((Employee) e).age));
+		employees.forEach(e -> System.out.println(((Employee2) e).getAge()));
 	}
 
 	private void lambdaSort() {
-		employees.sort((e1, e2) -> e1.age - e2.age);
-		employees.forEach(e -> System.out.println(e.age));
+		employees.sort((e1, e2) -> e1.getAge() - e2.getAge());
+		employees.forEach(e -> System.out.println(e.getAge()));
 
-		employees.sort((e1, e2) -> e2.age - e1.age);
-		employees.forEach(e -> System.out.println(e.age));
+		employees.sort((e1, e2) -> e2.getAge() - e1.getAge());
+		employees.forEach(e -> System.out.println(e.getAge()));
 
-		employees.sort((e1, e2) -> e1.name.compareTo(e2.name));
-		employees.forEach(e -> System.out.println(e.name));
+		employees.sort((e1, e2) -> e1.getName().compareTo(e2.getName()));
+		employees.forEach(e -> System.out.println(e.getName()));
 
-		employees.sort((e1, e2) -> e2.name.compareTo(e1.name));
-		employees.forEach(e -> System.out.println(e.name));
+		employees.sort((e1, e2) -> e2.getName().compareTo(e1.getName()));
+		employees.forEach(e -> System.out.println(e.getName()));
 	}
 
 	public static void main(String[] args) {
 
 		ComparableSort sort = new ComparableSort();
-		// sort.sort1();
+		sort.sort1();
 		sort.lambdaSort();
 	}
 
 }
 
-// class Employee implements Comparator<Employee> {
-class Employee implements Comparable<Employee> { // Natural ordering
+class Employee2 extends Employee implements Comparable<Employee2> { // Natural ordering
 
-	String name;
-	String city;
-	String postCode;
-	int age;
-	Date dateOfBirth;
-
-	/**
-	 * @param name
-	 * @param age
-	 */
-	public Employee(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
-
-	/**
-	 * @param name
-	 * @param city
-	 * @param postCode
-	 * @param age
-	 * @param dateOfBirth
-	 */
-	public Employee(String name, String city, String postCode, int age, Date dateOfBirth) {
-		super();
-		this.name = name;
-		this.city = city;
-		this.postCode = postCode;
-		this.age = age;
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getPostCode() {
-		return postCode;
-	}
-
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	@Override
-	public String toString() {
-		return "Employee [name=" + name + ", city=" + city + ", postCode=" + postCode + ", age=" + age + ", dateOfBirth=" + dateOfBirth + "]";
+	public Employee2(String name, int age) {
+		super(name, age);
 	}
 
 	// When implementing Comparable
 	@Override
-	public int compareTo(Employee o) {
-		return this.age - o.age; // ascending
-		// return o.age - this.age; // descending
+	public int compareTo(Employee2 o) {
+		return this.getAge() - o.getAge(); // ascending
+		// return o.getAge() - this.getAge(); // descending
 	}
 
 }

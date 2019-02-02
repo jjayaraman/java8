@@ -2,7 +2,6 @@ package com.jai.java8.lambda;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 public class Sort {
@@ -35,56 +34,6 @@ public class Sort {
 		Sort sort = new Sort();
 		sort.classicSort();
 		sort.lambdaSort();
-	}
-
-}
-
-class Employee {
-
-	String name;
-	String city;
-	String postCode;
-	int age;
-	Date dateOfBirth;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getPostCode() {
-		return postCode;
-	}
-
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
 	}
 
 }
