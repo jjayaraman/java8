@@ -8,7 +8,7 @@ public class HelloThread {
     int priority = Thread.MIN_PRIORITY;
 
     public static void main(String[] args) {
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(10);
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(11);
 
         HelloThread thread = new HelloThread();
         for (int i = 0; i < 10; i++) {
@@ -28,6 +28,7 @@ public class HelloThread {
     private void createThread() {
         MyThread myThread = new MyThread();
         myThread.setPriority(priority++);
+
         myThread.start();
     }
 }
