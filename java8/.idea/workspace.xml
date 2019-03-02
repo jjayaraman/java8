@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfe5337-23c5-4821-8e0f-000647ddf872" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java8.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jai/java6/thread/HelloThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/java8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/java8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/ComparableSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/ComparableSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/ComparatorSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/ComparatorSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Interface1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Interface1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Interface2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/functionalinterface/Interface2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/lambda/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/lambda/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jai/java8/stream/HelloStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jai/java8/stream/HelloStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jai/java8/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jai/java8/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="6bfe5337-23c5-4821-8e0f-000647ddf872" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,10 +24,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="192">
+              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.classpath">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -104,6 +77,11 @@
               <item name="java8" type="b2602c69:ProjectViewProjectNode" />
               <item name="java8" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="java8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java8" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -113,6 +91,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,11 +113,18 @@
       <option name="presentableId" value="Default" />
       <updated>1551563971742</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;java8/.idea/encodings.xml&#10;#&#9;java8/.idea/misc.xml&#10;#&#9;java8/.idea/modules.xml&#10;#&#9;java8/.idea/vcs.xml&#10;#&#9;java8/.idea/workspace.xml">
+      <created>1551565202517</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551565202517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="23" width="2487" height="1338" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24989775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -188,6 +174,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;java8/.idea/encodings.xml&#10;#&#9;java8/.idea/misc.xml&#10;#&#9;java8/.idea/modules.xml&#10;#&#9;java8/.idea/vcs.xml&#10;#&#9;java8/.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;java8/.idea/encodings.xml&#10;#&#9;java8/.idea/misc.xml&#10;#&#9;java8/.idea/modules.xml&#10;#&#9;java8/.idea/vcs.xml&#10;#&#9;java8/.idea/workspace.xml" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -201,10 +191,13 @@
     <entry file="file://$PROJECT_DIR$/java8.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="192">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
