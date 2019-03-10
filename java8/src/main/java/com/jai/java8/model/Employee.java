@@ -1,6 +1,7 @@
 package com.jai.java8.model;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Employee {
 
@@ -81,31 +82,20 @@ public class Employee {
 		return "Employee [name=" + name + ", city=" + city + ", postCode=" + postCode + ", age=" + age + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + age;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return age == employee.age &&
+                Objects.equals(name, employee.name) &&
+                Objects.equals(city, employee.city) &&
+                Objects.equals(postCode, employee.postCode) &&
+                Objects.equals(dateOfBirth, employee.dateOfBirth);
+    }
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Employee other = (Employee) obj;
-		if (age != other.age)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
+    public int hashCode() {
+        return Objects.hash(name, city, postCode, age, dateOfBirth);
 	}
 }
