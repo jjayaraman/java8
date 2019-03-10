@@ -1,4 +1,4 @@
-package com.jai.java6.thread;
+package com.jai.java8.thread;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
