@@ -11,6 +11,7 @@ public class UserInput {
         System.out.println(input.getValue());
     }
 
+    // All char allowed
     public static class TextInput {
         String value = "";
 
@@ -24,6 +25,7 @@ public class UserInput {
 
     }
 
+    // Only numbers
     public static class NumericInput extends TextInput {
 
         public void add(char c) {
