@@ -22,10 +22,10 @@ public class Sort {
 
 	private void lambdaSort() {
 		System.out.println("Before 	: " + names);
-		names.sort((a, b) -> a.compareTo(b));
+        names.sort(Comparator.naturalOrder());
 		System.out.println("Ascending sort 	: " + names);
-		names.sort((a, b) -> b.compareTo(a));
-		System.out.println("Desecending sort : " + names);
+        names.sort(Comparator.reverseOrder());
+        System.out.println("Descending sort : " + names);
 
 	}
 

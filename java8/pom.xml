@@ -22,6 +22,12 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.1.9.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -37,6 +43,14 @@
 				</configuration>
 			</plugin>
  -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
 		</plugins>
 
 	</build>
