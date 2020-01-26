@@ -19,6 +19,11 @@ public class ConcHashMap {
         System.out.println("containsKey('2') : " + map.containsKey("2"));
         System.out.println("Default : " + map.getOrDefault("2", "default for 2"));
 
+        map.putIfAbsent("1", "one updated"); // does not update existing key
+        System.out.println("Key 1 same as original value after putIfAbsent : " + map.get("1"));
+
+        // map.put(null,"null"); // null key or value not allowed
+
         System.out.println("keySet : " + map.keySet());
         System.out.println("values : " + map.values());
         System.out.println("entrySet : " + map.entrySet());
@@ -26,6 +31,7 @@ public class ConcHashMap {
         map.forEach((k, v) -> {
             System.out.println("key : " + k + ", value : " + v);
         });
+
 
     }
 
