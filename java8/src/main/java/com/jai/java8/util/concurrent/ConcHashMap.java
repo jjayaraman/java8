@@ -1,12 +1,12 @@
 package com.jai.java8.util.concurrent;
 
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class ConcHashMap {
 
     public static void concHashMap() {
-        Map map = new ConcurrentHashMap();
+        ConcurrentMap map = new ConcurrentHashMap();
 
         map.putIfAbsent("0", "zero");
         map.putIfAbsent("1", "one");
